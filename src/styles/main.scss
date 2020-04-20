@@ -7,3 +7,62 @@
 body {
   font-family: Lato, sans-serif;
 }
+
+.carousel__container {
+  display: grid;
+  grid-template-columns: 150px 350px 150px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  width: 310px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &-block {
+    width: 310px;
+    overflow: hidden;
+  }
+
+  &__item {
+    list-style: none;
+    margin-right: 20px;
+  }
+
+  &__btn {
+    border: none;
+    transition: transform 0.3s ease;
+    z-index: 100;
+    outline: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__dots-wrap {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(50%, 50%, 50%, 0.5);
+    border-radius: 50%;
+  }
+
+  &__dot_active {
+    background-color: rgba(50%, 50%, 50%, 1);
+  }
+}
