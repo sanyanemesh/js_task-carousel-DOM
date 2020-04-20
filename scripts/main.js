@@ -1,7 +1,7 @@
 'use strict';
 
 const slider = document.querySelector('.carousel');
-const sliderItem = [...slider.querySelectorAll('.carousel__item')];
+const sliderItems = [...slider.querySelectorAll('.carousel__item')];
 const dots = [...document.querySelectorAll('.carousel__dot')];
 const sliderElement = slider.querySelector('.carousel__item');
 const count = slider.childElementCount;
@@ -28,7 +28,7 @@ nextButton.addEventListener('click', () => {
   }
 
   number++;
-  sliderItem.forEach(moveSlider);
+  sliderItems.forEach(moveSlider);
 });
 
 prevButton.addEventListener('click', () => {
@@ -39,5 +39,5 @@ prevButton.addEventListener('click', () => {
   }
 
   number--;
-  sliderItem.forEach(moveSlider);
+  sliderItems.forEach(moveSlider);
 });
